@@ -14,6 +14,12 @@ class ModelFactory
      */
     public static function make(array $data = array())
     {
+        //Some endpoints return metadata files or folder as sub-nodes of a `metadata` node
+        //i.e. /files/move_v2
+        if (isset($data['metadata']['.tag'])) {
+            $data = $data['metadata'];
+        }
+
         if (static::isFileOrFolder($data)) {
             $tag = $data['.tag'];
 
@@ -25,6 +31,11 @@ class ModelFactory
             //Folder
             if (static::isFolder($tag)) {
                 return new FolderMetadata($data);
+            }
+
+            //Deleted File/Folder
+            if (static::isDeletedFileOrFolder($tag)) {
+                return new DeletedMetadata($data);
             }
         }
 
@@ -69,7 +80,7 @@ class ModelFactory
      */
     protected static function isFileOrFolder(array $data)
     {
-        return isset($data['.tag']) && isset($data['id']);
+        return isset($data['.tag']);
     }
 
     /**
@@ -123,7 +134,7 @@ class ModelFactory
     }
 
     /**
-     * @param array $data
+     * @param string $tag
      *
      * @return bool
      */
@@ -149,6 +160,6 @@ class ModelFactory
      */
     protected static function isDeletedFileOrFolder(array $data)
     {
-        return !isset($data['.tag']) || !isset($data['id']);
+        return 'deleted' === $tag;
     }
 }
