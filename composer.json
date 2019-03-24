@@ -1,7 +1,9 @@
 {
     "name": "davidsneighbour/dropbox-php-sdk",
-    "description": "Dropbox PHP API V2 SDK (Unofficial)",
-    "keywords" : ["dropbox", "sdk", "api", "client", "php", "unofficial"],
+    "type": "library",
+    "description": "Dropbox PHP API V2 SDK (Unofficial, for PHP 7.2+)",
+    "keywords" : ["dropbox", "sdk", "api", "client", "php", "php7.2", "unofficial"],
+    "homepage": "https://github.com/davidsneighbour/dropbox-php-sdk",
     "license": "MIT",
     "authors": [
         {
@@ -15,7 +17,8 @@
     ],
     "require": {
         "guzzlehttp/guzzle": "~6.0",
-        "tightenco/collect": "^5.2"
+        "tightenco/collect": "^5.2",
+        "php": ">=7.2"
     },
     "autoload": {
         "psr-4": {
