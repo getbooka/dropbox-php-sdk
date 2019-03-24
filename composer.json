@@ -27,8 +27,16 @@
     },
     "repositories": [
         {
-            "url": "https://github.com/davidsneighbour/dropbox-php-sdk.git",
-            "type": "git"
+            "type":"package",
+            "package": {
+              "name": "davidsneighbour/dropbox-php-sdk",
+              "version":"master",
+              "source": {
+                  "url": "https://github.com/davidsneighbour/dropbox-php-sdk.git",
+                  "type": "git",
+                  "reference":"master"
+                }
+            }
         }
-    ]
+    ],
 }
