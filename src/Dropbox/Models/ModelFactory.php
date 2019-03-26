@@ -49,7 +49,7 @@ class ModelFactory
         }
 
         //File Request
-        if (static::isFileRequest($data['id'])) {
+        if (static::isFileRequest($data)) {
             return new FileRequest($data);
         }
 
