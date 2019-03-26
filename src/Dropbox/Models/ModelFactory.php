@@ -154,11 +154,11 @@ class ModelFactory
     }
 
     /**
-     * @param array $data
+     * @param string $tag
      *
      * @return bool
      */
-    protected static function isDeletedFileOrFolder(array $data)
+    protected static function isDeletedFileOrFolder($tag)
     {
         return 'deleted' === $tag;
     }
