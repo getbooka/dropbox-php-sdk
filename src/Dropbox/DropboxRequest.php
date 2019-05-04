@@ -1,9 +1,9 @@
 <?php
 
-namespace Kunnu\Dropbox;
+namespace Dropbox;
 
-use Kunnu\Dropbox\Http\RequestBodyStream;
-use Kunnu\Dropbox\Http\RequestBodyJsonEncoded;
+use Dropbox\Http\RequestBodyStream;
+use Dropbox\Http\RequestBodyJsonEncoded;
 
 /**
  * DropboxRequest
@@ -56,7 +56,7 @@ class DropboxRequest
     /**
      * File to upload
      *
-     * @var \Kunnu\Dropbox\DropboxFile
+     * @var \Dropbox\DropboxFile
      */
     protected $file = null;
 
@@ -117,7 +117,7 @@ class DropboxRequest
      *
      * @param string
      *
-     * @return \Kunnu\Dropbox\DropboxRequest
+     * @return \Dropbox\DropboxRequest
      */
     public function setMethod($method)
     {
@@ -141,7 +141,7 @@ class DropboxRequest
      *
      * @param string
      *
-     * @return \Kunnu\Dropbox\DropboxRequest
+     * @return \Dropbox\DropboxRequest
      */
     public function setAccessToken($accessToken)
     {
@@ -165,7 +165,7 @@ class DropboxRequest
      *
      * @param string
      *
-     * @return \Kunnu\Dropbox\DropboxRequest
+     * @return \Dropbox\DropboxRequest
      */
     public function setEndpoint($endpoint)
     {
@@ -189,7 +189,7 @@ class DropboxRequest
      *
      * @param string
      *
-     * @return \Kunnu\Dropbox\DropboxRequest
+     * @return \Dropbox\DropboxRequest
      */
     public function setEndpointType($endpointType)
     {
@@ -213,7 +213,7 @@ class DropboxRequest
      *
      * @param string
      *
-     * @return \Kunnu\Dropbox\DropboxRequest
+     * @return \Dropbox\DropboxRequest
      */
     public function setContentType($contentType)
     {
@@ -237,7 +237,7 @@ class DropboxRequest
      *
      * @param array
      *
-     * @return \Kunnu\Dropbox\DropboxRequest
+     * @return \Dropbox\DropboxRequest
      */
     public function setHeaders(array $headers)
     {
@@ -249,7 +249,7 @@ class DropboxRequest
     /**
      * Get JSON Encoded Request Body
      *
-     * @return \Kunnu\Dropbox\Http\RequestBodyJsonEncoded
+     * @return \Dropbox\Http\RequestBodyJsonEncoded
      */
     public function getJsonBody()
     {
@@ -271,7 +271,7 @@ class DropboxRequest
      *
      * @param array
      *
-     * @return \Kunnu\Dropbox\DropboxRequest
+     * @return \Dropbox\DropboxRequest
      */
     public function setParams(array $params = [])
     {
@@ -288,7 +288,7 @@ class DropboxRequest
     /**
      * Get Stream Request Body
      *
-     * @return \Kunnu\Dropbox\Http\RequestBodyStream
+     * @return \Dropbox\Http\RequestBodyStream
      */
     public function getStreamBody()
     {
@@ -298,7 +298,7 @@ class DropboxRequest
     /**
      * Get the File to be sent with the Request
      *
-     * @return \Kunnu\Dropbox\DropboxFile
+     * @return \Dropbox\DropboxFile
      */
     public function getFile()
     {
@@ -308,9 +308,9 @@ class DropboxRequest
     /**
      * Set the File to be sent with the Request
      *
-     * @param \Kunnu\Dropbox\DropboxFile
+     * @param \Dropbox\DropboxFile
      *
-     * @return \Kunnu\Dropbox\DropboxRequest
+     * @return \Dropbox\DropboxRequest
      */
     public function setFile(DropboxFile $file)
     {

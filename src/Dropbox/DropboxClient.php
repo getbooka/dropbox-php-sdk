@@ -1,7 +1,7 @@
 <?php
-namespace Kunnu\Dropbox;
+namespace Dropbox;
 
-use Kunnu\Dropbox\Http\Clients\DropboxHttpClientInterface;
+use Dropbox\Http\Clients\DropboxHttpClientInterface;
 
 /**
  * DropboxClient
@@ -25,7 +25,7 @@ class DropboxClient
     /**
      * DropboxHttpClientInterface Implementation
      *
-     * @var \Kunnu\Dropbox\Http\Clients\DropboxHttpClientInterface
+     * @var \Dropbox\Http\Clients\DropboxHttpClientInterface
      */
     protected $httpClient;
 
@@ -43,7 +43,7 @@ class DropboxClient
     /**
      * Get the HTTP Client
      *
-     * @return \Kunnu\Dropbox\Http\Clients\DropboxHttpClientInterface $httpClient
+     * @return \Dropbox\Http\Clients\DropboxHttpClientInterface $httpClient
      */
     public function getHttpClient()
     {
@@ -53,9 +53,9 @@ class DropboxClient
     /**
      * Set the HTTP Client
      *
-     * @param \Kunnu\Dropbox\Http\Clients\DropboxHttpClientInterface $httpClient
+     * @param \Dropbox\Http\Clients\DropboxHttpClientInterface $httpClient
      *
-     * @return \Kunnu\Dropbox\DropboxClient
+     * @return \Dropbox\DropboxClient
      */
     public function setHttpClient(DropboxHttpClientInterface $httpClient)
     {
@@ -139,9 +139,9 @@ class DropboxClient
      * @param  DropboxRequest $request
      * @param  DropboxResponse $response
      *
-     * @return \Kunnu\Dropbox\DropboxResponse
+     * @return \Dropbox\DropboxResponse
      *
-     * @throws \Kunnu\Dropbox\Exceptions\DropboxClientException
+     * @throws \Dropbox\Exceptions\DropboxClientException
      */
     public function sendRequest(DropboxRequest $request, DropboxResponse $response = null)
     {
@@ -175,7 +175,7 @@ class DropboxClient
     /**
      * Prepare a Request before being sent to the HTTP Client
      *
-     * @param  \Kunnu\Dropbox\DropboxRequest $request
+     * @param  \Dropbox\DropboxRequest $request
      *
      * @return array [Request URL, Request Headers, Request Body]
      */

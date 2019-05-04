@@ -1,5 +1,5 @@
 <?php
-namespace Kunnu\Dropbox\Store;
+namespace Dropbox\Store;
 
 class SessionPersistentDataStore implements PersistentDataStoreInterface
 {

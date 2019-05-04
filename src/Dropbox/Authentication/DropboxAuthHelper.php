@@ -1,10 +1,10 @@
 <?php
-namespace Kunnu\Dropbox\Authentication;
+namespace Dropbox\Authentication;
 
-use Kunnu\Dropbox\Models\AccessToken;
-use Kunnu\Dropbox\Exceptions\DropboxClientException;
-use Kunnu\Dropbox\Store\PersistentDataStoreInterface;
-use Kunnu\Dropbox\Security\RandomStringGeneratorInterface;
+use Dropbox\Models\AccessToken;
+use Dropbox\Exceptions\DropboxClientException;
+use Dropbox\Store\PersistentDataStoreInterface;
+use Dropbox\Security\RandomStringGeneratorInterface;
 
 class DropboxAuthHelper
 {
@@ -18,21 +18,21 @@ class DropboxAuthHelper
     /**
      * OAuth2 Client
      *
-     * @var \Kunnu\Dropbox\Authentication\OAuth2Client
+     * @var \Dropbox\Authentication\OAuth2Client
      */
     protected $oAuth2Client;
 
     /**
      * Random String Generator
      *
-     * @var \Kunnu\Dropbox\Security\RandomStringGeneratorInterface
+     * @var \Dropbox\Security\RandomStringGeneratorInterface
      */
     protected $randomStringGenerator;
 
     /**
      * Persistent Data Store
      *
-     * @var \Kunnu\Dropbox\Store\PersistentDataStoreInterface
+     * @var \Dropbox\Store\PersistentDataStoreInterface
      */
     protected $persistentDataStore;
 
@@ -46,9 +46,9 @@ class DropboxAuthHelper
     /**
      * Create a new DropboxAuthHelper instance
      *
-     * @param \Kunnu\Dropbox\Authentication\OAuth2Client             $oAuth2Client
-     * @param \Kunnu\Dropbox\Security\RandomStringGeneratorInterface $randomStringGenerator
-     * @param \Kunnu\Dropbox\Store\PersistentDataStoreInterface      $persistentDataStore
+     * @param \Dropbox\Authentication\OAuth2Client             $oAuth2Client
+     * @param \Dropbox\Security\RandomStringGeneratorInterface $randomStringGenerator
+     * @param \Dropbox\Store\PersistentDataStoreInterface      $persistentDataStore
      */
     public function __construct(
         OAuth2Client $oAuth2Client,
@@ -63,7 +63,7 @@ class DropboxAuthHelper
     /**
      * Get OAuth2Client
      *
-     * @return \Kunnu\Dropbox\Authentication\OAuth2Client
+     * @return \Dropbox\Authentication\OAuth2Client
      */
     public function getOAuth2Client()
     {
@@ -73,7 +73,7 @@ class DropboxAuthHelper
     /**
      * Get the Random String Generator
      *
-     * @return \Kunnu\Dropbox\Security\RandomStringGeneratorInterface
+     * @return \Dropbox\Security\RandomStringGeneratorInterface
      */
     public function getRandomStringGenerator()
     {
@@ -83,7 +83,7 @@ class DropboxAuthHelper
     /**
      * Get the Persistent Data Store
      *
-     * @return \Kunnu\Dropbox\Store\PersistentDataStoreInterface
+     * @return \Dropbox\Store\PersistentDataStoreInterface
      */
     public function getPersistentDataStore()
     {
@@ -198,7 +198,7 @@ class DropboxAuthHelper
      * @param  string $state       CSRF & URL State
      * @param  string $redirectUri Redirect URI used while getAuthUrl
      *
-     * @return \Kunnu\Dropbox\Models\AccessToken
+     * @return \Dropbox\Models\AccessToken
      */
     public function getAccessToken($code, $state = null, $redirectUri = null)
     {

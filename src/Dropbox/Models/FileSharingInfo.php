@@ -1,5 +1,5 @@
 <?php
-namespace Kunnu\Dropbox\Models;
+namespace Dropbox\Models;
 
 class FileSharingInfo extends BaseModel
 {

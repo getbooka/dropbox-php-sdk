@@ -1,5 +1,5 @@
 <?php
-namespace Kunnu\Dropbox;
+namespace Dropbox;
 
 class DropboxResponseToFile extends DropboxResponse
 {

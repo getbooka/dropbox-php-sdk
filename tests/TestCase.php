@@ -1,19 +1,19 @@
 <?php
 
-namespace Kunnu\Dropbox\Tests;
+namespace Dropbox\Tests;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Middleware;
-use Kunnu\Dropbox\Dropbox;
+use Dropbox\Dropbox;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
-use Kunnu\Dropbox\DropboxApp;
-use Kunnu\Dropbox\DropboxClient;
+use Dropbox\DropboxApp;
+use Dropbox\DropboxClient;
 use GuzzleHttp\Handler\MockHandler;
 use PHPUnit\Framework\TestCase as BaseTestCase;
-use Kunnu\Dropbox\Http\Clients\DropboxHttpClientFactory;
-use Kunnu\Dropbox\Http\Clients\DropboxHttpClientInterface;
+use Dropbox\Http\Clients\DropboxHttpClientFactory;
+use Dropbox\Http\Clients\DropboxHttpClientInterface;
 
 /**
  * @author Cristiano Cinotti <cristianocinotti@gmail.com>

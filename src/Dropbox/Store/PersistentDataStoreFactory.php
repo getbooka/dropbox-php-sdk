@@ -1,5 +1,5 @@
 <?php
-namespace Kunnu\Dropbox\Store;
+namespace Dropbox\Store;
 
 use InvalidArgumentException;
 
@@ -13,11 +13,11 @@ class PersistentDataStoreFactory
     /**
      * Make Persistent Data Store
      *
-     * @param null|string|\Kunnu\Dropbox\Store\PersistentDataStoreInterface $store
+     * @param null|string|\Dropbox\Store\PersistentDataStoreInterface $store
      *
      * @throws InvalidArgumentException
      *
-     * @return \Kunnu\Dropbox\Store\PersistentDataStoreInterface
+     * @return \Dropbox\Store\PersistentDataStoreInterface
      */
     public static function makePersistentDataStore($store = null)
     {
@@ -29,6 +29,6 @@ class PersistentDataStoreFactory
             return $store;
         }
 
-        throw new InvalidArgumentException('The persistent data store must be set to null, "session" or be an instance of use \Kunnu\Dropbox\Store\PersistentDataStoreInterface');
+        throw new InvalidArgumentException('The persistent data store must be set to null, "session" or be an instance of use \Dropbox\Store\PersistentDataStoreInterface');
     }
 }

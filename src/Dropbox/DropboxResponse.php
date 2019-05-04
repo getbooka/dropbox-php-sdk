@@ -1,7 +1,7 @@
 <?php
-namespace Kunnu\Dropbox;
+namespace Dropbox;
 
-use Kunnu\Dropbox\Exceptions\DropboxClientException;
+use Dropbox\Exceptions\DropboxClientException;
 
 class DropboxResponse
 {
@@ -83,7 +83,7 @@ class DropboxResponse
     /**
      * Get the Request Request
      *
-     * @return \Kunnu\Dropbox\DropboxRequest
+     * @return \Dropbox\DropboxRequest
      */
     public function getRequest()
     {
@@ -172,7 +172,7 @@ class DropboxResponse
      *
      * @return void
      *
-     * @throws \Kunnu\Dropbox\Exceptions\DropboxClientException
+     * @throws \Dropbox\Exceptions\DropboxClientException
      */
     protected function validateResponse()
     {

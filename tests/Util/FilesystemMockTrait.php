@@ -1,6 +1,6 @@
 <?php
 
-namespace Kunnu\Dropbox\Tests\Util;
+namespace Dropbox\Tests\Util;
 
 use org\bovigo\vfs\vfsStream;
 use org\bovigo\vfs\vfsStreamFile;

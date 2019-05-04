@@ -1,6 +1,6 @@
 <?php
 
-namespace Kunnu\Dropbox\Tests\Util;
+namespace Dropbox\Tests\Util;
 
 /**
  * Utility class containing data provider methods.

@@ -1,5 +1,5 @@
 <?php
-namespace Kunnu\Dropbox\Exceptions;
+namespace Dropbox\Exceptions;
 
 use Exception;
 

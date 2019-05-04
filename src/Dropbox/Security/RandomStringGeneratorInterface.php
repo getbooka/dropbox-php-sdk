@@ -1,5 +1,5 @@
 <?php
-namespace Kunnu\Dropbox\Security;
+namespace Dropbox\Security;
 
 /**
  * Thanks to Facebook

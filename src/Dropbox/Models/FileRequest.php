@@ -1,5 +1,5 @@
 <?php
-namespace Kunnu\Dropbox\Models;
+namespace Dropbox\Models;
 
 class FileRequest extends BaseModel
 {
@@ -56,7 +56,7 @@ class FileRequest extends BaseModel
     /**
      * Set if this file is contained in a shared folder.
      *
-     * @var \Kunnu\Dropbox\Models\FileRequestDeadline
+     * @var \Dropbox\Models\FileRequestDeadline
      */
     protected $deadline;
 
@@ -154,7 +154,7 @@ class FileRequest extends BaseModel
     /**
      * Get the 'deadline' property of the file request model.
      *
-     * @return \Kunnu\Dropbox\Models\FileRequestDeadline
+     * @return \Dropbox\Models\FileRequestDeadline
      */
     public function getDeadline()
     {

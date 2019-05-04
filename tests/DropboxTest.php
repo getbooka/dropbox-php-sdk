@@ -1,32 +1,32 @@
 <?php
 
-namespace Kunnu\Dropbox\Tests;
+namespace Dropbox\Tests;
 
-use Kunnu\Dropbox\Dropbox;
+use Dropbox\Dropbox;
 use GuzzleHttp\Psr7\Request;
 use org\bovigo\vfs\vfsStream;
-use Kunnu\Dropbox\DropboxClient;
-use Kunnu\Dropbox\DropboxFile;
-use Kunnu\Dropbox\DropboxResponse;
-use Kunnu\Dropbox\Models\File;
-use Kunnu\Dropbox\Models\Account;
-use Kunnu\Dropbox\Models\BaseModel;
-use Kunnu\Dropbox\Models\Thumbnail;
-use Kunnu\Dropbox\Models\AccountList;
-use Kunnu\Dropbox\Models\FileMetadata;
-use Kunnu\Dropbox\Models\SearchResult;
-use Kunnu\Dropbox\Models\CopyReference;
-use Kunnu\Dropbox\Models\SearchResults;
-use Kunnu\Dropbox\Models\TemporaryLink;
-use Kunnu\Dropbox\Models\FolderMetadata;
-use Kunnu\Dropbox\Models\DeletedMetadata;
-use Kunnu\Dropbox\Models\MetadataCollection;
-use Kunnu\Dropbox\Models\ModelCollection;
-use Kunnu\Dropbox\Tests\Util\Response200;
-use Kunnu\Dropbox\Tests\Util\Response409;
-use Kunnu\Dropbox\Tests\Util\ResponsesTrait;
-use Kunnu\Dropbox\Tests\Util\DataProviderTrait;
-use Kunnu\Dropbox\Tests\Util\FilesystemMockTrait;
+use Dropbox\DropboxClient;
+use Dropbox\DropboxFile;
+use Dropbox\DropboxResponse;
+use Dropbox\Models\File;
+use Dropbox\Models\Account;
+use Dropbox\Models\BaseModel;
+use Dropbox\Models\Thumbnail;
+use Dropbox\Models\AccountList;
+use Dropbox\Models\FileMetadata;
+use Dropbox\Models\SearchResult;
+use Dropbox\Models\CopyReference;
+use Dropbox\Models\SearchResults;
+use Dropbox\Models\TemporaryLink;
+use Dropbox\Models\FolderMetadata;
+use Dropbox\Models\DeletedMetadata;
+use Dropbox\Models\MetadataCollection;
+use Dropbox\Models\ModelCollection;
+use Dropbox\Tests\Util\Response200;
+use Dropbox\Tests\Util\Response409;
+use Dropbox\Tests\Util\ResponsesTrait;
+use Dropbox\Tests\Util\DataProviderTrait;
+use Dropbox\Tests\Util\FilesystemMockTrait;
 
 /**
  * @author Cristiano Cinotti <cristianocinotti@gmail.com>
@@ -70,7 +70,7 @@ class DropboxTest extends TestCase
     }
 
     /**
-     * @expectedException \Kunnu\Dropbox\Exceptions\DropboxClientException
+     * @expectedException \Dropbox\Exceptions\DropboxClientException
      * @expectedExceptionMessage Metadata for the root folder is unsupported.
      *
      * @dataProvider providerRoots
@@ -83,7 +83,7 @@ class DropboxTest extends TestCase
     }
 
     /**
-     * @expectedException \Kunnu\Dropbox\Exceptions\DropboxClientException
+     * @expectedException \Dropbox\Exceptions\DropboxClientException
      */
     public function testGetMetadataErrorThrowsException()
     {
@@ -183,7 +183,7 @@ class DropboxTest extends TestCase
     }
 
     /**
-     * @expectedException \Kunnu\Dropbox\Exceptions\DropboxClientException
+     * @expectedException \Dropbox\Exceptions\DropboxClientException
      */
     public function testListFolderLatestCursorNoneThrowsException()
     {
@@ -361,7 +361,7 @@ class DropboxTest extends TestCase
     }
 
     /**
-     * @expectedException \Kunnu\Dropbox\Exceptions\DropboxClientException
+     * @expectedException \Dropbox\Exceptions\DropboxClientException
      * @expectedExceptionMessage Invalid Response
      *
      * @dataProvider providerWrongResponse
@@ -416,7 +416,7 @@ class DropboxTest extends TestCase
     }
 
     /**
-     * @expectedException \Kunnu\Dropbox\Exceptions\DropboxClientException
+     * @expectedException \Dropbox\Exceptions\DropboxClientException
      * @expectedExceptionMessage Could not retrieve Async Job ID
      */
     public function testSaveUrlWrongResponseThrowsException()
@@ -518,7 +518,7 @@ class DropboxTest extends TestCase
     }
 
     /**
-     * @expectedException \Kunnu\Dropbox\Exceptions\DropboxClientException
+     * @expectedException \Dropbox\Exceptions\DropboxClientException
      * @expectedExceptionMessage Could not retrieve Session ID
      */
     public function testStartUploadSessionNoSessionIdThrowsException()
@@ -633,7 +633,7 @@ class DropboxTest extends TestCase
     }
 
     /**
-     * @expectedException \Kunnu\Dropbox\Exceptions\DropboxClientException
+     * @expectedException \Dropbox\Exceptions\DropboxClientException
      * @expectedExceptionMessage Invalid format
      */
     public function testGetThumbnailWrongFormatThrowsException()

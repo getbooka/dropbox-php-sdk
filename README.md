@@ -1,4 +1,4 @@
-This is a fork of [kunalvarma05/dropbox-php-sdk](https://github.com/kunalvarma05/dropbox-php-sdk). Since that library was not updated for over two years now I started collecting Pull Requests and update the library to current versions. This library has Dropbox file request support. 
+This is a fork of [kunalvarma05/dropbox-php-sdk](https://github.com/kunalvarma05/dropbox-php-sdk). Since that library was updated last in 2017 I started collecting Pull Requests and update the library to current versions of the API and collecting improvements. This library has Dropbox file request support. 
 
 Dropbox SDK v2 for PHP
 ======================================================
@@ -14,14 +14,11 @@ An unofficial PHP SDK to work with the [Dropbox API v2](https://www.dropbox.com/
 
 <img src="https://cloud.githubusercontent.com/assets/893057/13731118/b7cf0e4e-e987-11e5-942f-13c53d65da35.png">
 
-
 ## Get Started
 Head over to the [**Getting Started**](https://github.com/kunalvarma05/dropbox-php-sdk/wiki/Getting-Started) Wiki section to Install and Get started.
 
-
 ## API Docs
 [**View API Docs**](https://kunalvarma05.github.io/dropbox-php-sdk/)
-
 
 ## License
 Dropbox PHP Client is licensed under The MIT License (MIT).

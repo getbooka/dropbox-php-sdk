@@ -1,6 +1,6 @@
 <?php
 
-namespace Kunnu\Dropbox\Tests\Util;
+namespace Dropbox\Tests\Util;
 
 use GuzzleHttp\Psr7\Response;
 
