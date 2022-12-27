@@ -447,7 +447,7 @@ class Dropbox
      *
      * @return \Dropbox\Models\SearchResults
      */
-    public function search(string $path = '', $query, array $params = [])
+    public function search(string $path, $query, array $params = [])
     {
         //Specify the root folder as an
         //empty string rather than as "/"
