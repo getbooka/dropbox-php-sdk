@@ -2,21 +2,21 @@
 
 namespace Dropbox;
 
-use Dropbox\Models\File;
-use Dropbox\Models\Account;
-use Dropbox\Models\Thumbnail;
-use Dropbox\Models\AccountList;
-use Dropbox\Models\ModelFactory;
-use Dropbox\Models\FileMetadata;
-use Dropbox\Models\CopyReference;
-use Dropbox\Models\FolderMetadata;
-use Dropbox\Models\ModelCollection;
-use Dropbox\Authentication\OAuth2Client;
 use Dropbox\Store\PersistentDataStoreFactory;
-use Dropbox\Authentication\DropboxAuthHelper;
-use Dropbox\Exceptions\DropboxClientException;
 use Dropbox\Security\RandomStringGeneratorFactory;
+use Dropbox\Models\Thumbnail;
+use Dropbox\Models\ModelFactory;
+use Dropbox\Models\ModelCollection;
+use Dropbox\Models\FolderMetadata;
+use Dropbox\Models\FileMetadata;
+use Dropbox\Models\File;
+use Dropbox\Models\CopyReference;
+use Dropbox\Models\AccountList;
+use Dropbox\Models\Account;
 use Dropbox\Http\Clients\DropboxHttpClientFactory;
+use Dropbox\Exceptions\DropboxClientException;
+use Dropbox\Authentication\OAuth2Client;
+use Dropbox\Authentication\DropboxAuthHelper;
 
 /**
  * Dropbox
@@ -209,7 +209,7 @@ class Dropbox
      * @link https://www.dropbox.com/developers/documentation/http/documentation#files-get_metadata
      *
      */
-    public function getMetadata(string $path = '', array $params = [])
+    public function getMetadata(string $path, array $params = [])
     {
         //Root folder is unsupported
         if ('/' === $path || '' === $path) {
@@ -324,7 +324,7 @@ class Dropbox
      *
      * @return \Dropbox\Models\MetadataCollection
      */
-    public function listFolder(string $path = '', array $params = [])
+    public function listFolder(string $path, array $params = [])
     {
         //Specify the root folder as an
         //empty string rather than as "/"
@@ -374,7 +374,7 @@ class Dropbox
      * @link https://www.dropbox.com/developers/documentation/http/documentation#files-list_folder-get_latest_cursor
      *
      */
-    public function listFolderLatestCursor(string $path = '', array $params = [])
+    public function listFolderLatestCursor(string $path, array $params = [])
     {
         //Specify the root folder as an
         //empty string rather than as "/"
